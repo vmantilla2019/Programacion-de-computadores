@@ -1,0 +1,31 @@
+import math
+
+def invertir_cadena(cadena):
+    return cadena[::-1]
+
+def mayor_de_tres_numeros(a,b,c):
+    return max(a,b,c)
+
+def calcular_area(radio,altura):
+    area = 2 * math.pi * radio * altura + 2 * math.pi * radio**2
+    return area
+
+def buscar_palabra(cadena,palabra):
+    return palabra in cadena
+
+
+texto = input("Ingrese una cadena: ")
+print("Cadena invertida:", invertir_cadena(texto))
+
+n1 = float(input("Ingrese número 1: "))
+n2 = float(input("Ingrese número 2: "))
+n3 = float(input("Ingrese número 3: "))
+print("Mayor:", mayor_de_tres_numeros(n1,n2,n3))
+
+radio = float(input("Ingrese el radio: "))
+altura = float(input("Ingrese la altura: "))
+print("Área del cilindro:", calcular_area(radio,altura))
+
+frase = input("Ingrese una frase: ")
+palabra = input("Ingrese la palabra a buscar: ")
+print(buscar_palabra(frase,palabra))

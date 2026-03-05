@@ -1,0 +1,45 @@
+def promedio(*numeros):
+    return sum(numeros)/len(numeros)
+
+def multiplicar_lista(lista,numero):
+    nueva=[]
+    for i in lista:
+        nueva.append(i*numero)
+    return nueva
+
+def mayor_de_varios_numeros(*numeros):
+    return max(numeros)
+
+def calcular_mediana(*numeros):
+    lista=sorted(numeros)
+    n=len(lista)
+
+    if n%2==1:
+        return lista[n//2]
+    else:
+        return (lista[n//2-1]+lista[n//2])/2
+
+def contar_ocurrencias(cadena,palabra):
+    return cadena.count(palabra)
+
+
+nums=input("Ingrese números para promedio separados por espacio: ")
+nums=list(map(float,nums.split()))
+print("Promedio:", promedio(*nums))
+
+lista=input("Ingrese números para la lista: ")
+lista=list(map(float,lista.split()))
+num=float(input("Número para multiplicar: "))
+print(multiplicar_lista(lista,num))
+
+nums=input("Ingrese números para hallar el mayor, separados por espacios")
+nums=list(map(float,nums.split()))
+print("Mayor:", mayor_de_varios_numeros(*nums))
+
+nums=input("Ingrese números para la mediana: ")
+nums=list(map(float,nums.split()))
+print("Mediana:", calcular_mediana(*nums))
+
+cadena=input("Ingrese una frase: ")
+palabra=input("Palabra a buscar: ")
+print("Ocurrencias:", contar_ocurrencias(cadena,palabra))

@@ -1,0 +1,41 @@
+
+# TALLER FUNCIONES EN PYTHON VALERIE MANTILLA
+
+import random
+17
+def edad():
+    e = input("Ingrese su edad: ")
+    print("Tu edad es:", e, "años")
+
+def suma():
+    n1 = float(input("Ingrese el primer número: "))
+    n2 = float(input("Ingrese el segundo número: "))
+    print("La suma es:", n1 + n2)
+
+def num_aleatorio():
+    numero = random.randint(1, 100)
+    intento = int(input("Adivina el número entre 1 y 100: "))
+
+    if intento > numero:
+        print("El número es menor")
+    elif intento < numero:
+        print("El número es mayor")
+    else:
+        print("divinaste el número")
+
+def contador_vocales():
+    cadena = input("Ingrese una cadena: ")
+    vocales = "aeiouAEIOU"
+    contador = 0
+
+    for letra in cadena:
+        if letra in vocales:
+            contador += 1
+
+    print("Número de vocales:", contador)
+
+
+edad()
+suma()
+num_aleatorio()
+contador_vocales()
